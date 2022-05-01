@@ -37,6 +37,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student updateStudent(final Long id, final StudentDTO studentDTO) throws NotFoundException {
+        System.out.println("Change");
         Student student = this.getById(id);
         if (!StringUtils.isBlank(studentDTO.getFirstName())) {
             student.setFirstName(studentDTO.getFirstName());
